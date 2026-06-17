@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>plantify</title>
+  
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body{
+      background-color: #224222;
+    }
+   
+
+   .navbar-brand img{
+    background:#25a006;
+    padding:5px;
+    border-radius:0 0 25px 25px;
+}
+
+.nav-link{
+    color:#222 !important;
+    font-weight:500;
+    margin:0 10px;
+}
+
+.nav-link:hover{
+    color:#25a006 !important;
+}
+
+.fa-cart-shopping,
+.fa-user{
+    transition:.3s;
+}
+
+.fa-cart-shopping:hover,
+.fa-user:hover{
+    color:#25a006;
+}
+
+.dropdown-menu{
+    border:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+.mainheader{
+    background-image: url("picture/unsplash_XzBluXxBoyQ (2).png");
+    background-repeat: no-repeat;
+   
+}
+   .card img {
+      height: 320px;
+      object-fit: cover;
+      
+    }
+  .transparent-card {
+    background: rgba(69, 73, 69, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+    color: white;
+    position: relative;
+  }
+
+  .transparent-card:hover {
+    transform: translateY(-5px);
+  }
+
+  
+  #heading{
+    background-image: url(picture/pngegg\ \(1\)-Picsart-BackgroundRemover.png);
+background-repeat: no-repeat;
+ 
+  }
+#planttype{
+
+
+
+ transition: all 0.4s ease-in-out;
+
+ height: 300px;
+}
+#planttype:hover{
+   transform: translateY(-10px);
+}
+/* Default styling as it is from your code */
+
+/* Tablet view */
+@media (max-width: 992px) {
+  #hero #heading {
+    margin-top: 80px !important;
+    text-align: center;
+  }
+  #hero h1 {
+    font-size: 50px !important;
+  }
+  #hero p {
+    font-size: 14px !important;
+  }
+  #hero img {
+    max-width: 400px !important;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  #hero {
+    text-align: center;
+  }
+  #hero #heading {
+    margin-top: 40px !important;
+  }
+  #hero h1 {
+    font-size: 35px !important;
+  }
+  #hero p {
+    font-size: 13px !important;
+  }
+  #hero img {
+    margin-top: 20px;
+    max-width: 300px !important;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 28px !important;
+  }
+  #hero p {
+    font-size: 12px !important;
+  }
+  #hero button {
+    width: 120px !important;
+    height: 45px !important;
+    font-size: 18px !important;
+  }
+}
+#PTypcard{
+  background-color: rgba(250, 252, 250, 0.5);
+  height: 300px;
+}
+ .plant-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background-color: #2d442d;
+        height: 370px;
+        
+        
+    }
+    
+    .plant-card img {
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+         background-color: #2d442d;
+    }
+    .plant-card:hover img {
+        transform: scale(1.05);
+    }
+    .plant-card:hover {
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        transform: translateY(-5px);
+    }
+    .plant-card .card-body {
+       background-color: #2d442d;
+        padding: 20px;
+        
+    }
+    .plant-card h5 {
+        color: #2f5d2f;
+        font-weight: bold;
+    }
+    .read-more {
+        color: #f6f8f6;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .read-more:hover {
+        color: #11a811;
+    }
+    .circle {
+  background-color: white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* extra image part hide ho jaye */
+}
+.circle img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* image circle ke andar properly fit ho */
+}
+.reviewcard{
+  background-color: rgba(28, 46, 28, 0.1);
+}
+
+    
+
+    .reviews-wrapper {
+      overflow: hidden;
+      position: relative;
+      margin-top: 140px;
+    }
+
+    .reviews-track {
+      display: flex;
+      width: max-content;
+      animation: scrollLeft 40s linear infinite;
+    }
+
+    .reviewcard {
+      background-color:#2d442d;
+      color: white;
+      border-radius: 10px;
+      width: 300px;
+      margin: 0 10px;
+      flex: 0 0 auto;
+    }
+
+    @keyframes scrollLeft {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .reviewcard img {
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .reviewcard {
+        width: 250px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .reviewcard {
+        width: 220px;
+      }
+    }
+     
+   
+    .contact-box {
+      background:#2d442d;
+      padding: 30px;
+      border-radius: 6px;
+      width: 450px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .contact-box h3 {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: white;
+    }
+    .contact-box p {
+      font-size: 14px;
+      color: #faf8f8;
+      margin-bottom: 20px;
+    }
+    .form-control {
+      margin-bottom: 15px;
+      border-radius: 4px;
+    }
+    .btn-submit {
+      width: 100%;
+      background: #2e7d32;
+      color: white;
+      font-weight: bold;
+    }
+    .btn-submit:hover {
+      background: #256528;
+    }
+    .plant-img {
+      margin-left: 40px;
+    }
+    @media(max-width: 768px){
+      .contact-section {
+        flex-direction: column;
+      }
+      .plant-img {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+    /* Footer Area */
+.footer-area {
+    background-size: cover;
+    background-position: center;
+    padding-top: 70px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-area .main-footer-area {
+    padding-bottom: 50px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-logo p {
+    color: #ddd;
+}
+
+.single-footer-widget {
+    margin-bottom: 30px;
+}
+
+.single-footer-widget .widget-title h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.single-footer-widget p,
+.single-footer-widget ul li a,
+.single-footer-widget .contact-information p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.single-footer-widget .contact-information p span {
+    font-weight: 600;
+    color: #fff;
+}
+
+.widget-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.widget-nav ul li {
+    margin-bottom: 10px;
+}
+
+.widget-nav ul li a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.widget-nav ul li a:hover {
+    color: #28a745;
+}
+
+.social-info a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.social-info a:hover {
+    color: #28a745;
+}
+
+/* Best Seller Product */
+.single-best-seller-product {
+    margin-bottom: 20px;
+}
+
+.single-best-seller-product .product-thumbnail img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.single-best-seller-product .product-info a {
+    color: #fff;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.single-best-seller-product .product-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #28a745;
+}
+
+/* Footer Bottom */
+.footer-bottom-area {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px 0;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.footer-bottom-area .border-line {
+    height: 1px;
+    background-color: #444;
+    margin-bottom: 15px;
+}
+
+.copywrite-text p {
+    margin: 0;
+}
+
+.copywrite-text i {
+    color: red;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin-left: 15px;
+}
+
+.footer-nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #28a745;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .footer-nav ul {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .footer-nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .copywrite-text,
+    .footer-nav {
+        text-align: center;
+    }
+}
+.footer-area bg-img{
+  background-color: rgba(28, 46, 28, 0.1); ;
+}
+@media (max-width: 768px) {
+  .widget-nav ul {
+    columns: 1; /* mobile = single column */
+  }
+  .footer-area {
+    text-align: center;
+  }
+  .single-best-seller-product {
+    justify-content: center;
+  }
+  .social-info {
+    margin-top: 10px;
+  }
+}
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-card .card-body {
+  padding: 15px;
+}
+/* Services Section */
+.services-section .service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services-section .service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.services-section .service-card .service-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.services-section .service-card h5 {
+  margin: 0 0 5px 0;
+}
+
+.services-section .service-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Hover Effect */
+.services-section .service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.services-section .service-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Large card for Grafting */
+.services-section .service-card.large {
+  border-radius: 50px;
+}
+
+/* Cutting Image Height */
+.services-section .service-card.cutting img {
+  height: 300px;
+}
+.products-section {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 60px 0;
+}
+
+
+/* Main Heading */
+.main-title {
+    font-size: 42px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* underline effect */
+.main-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #0d6efd;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 10px;
+}
+
+/* subtitle */
+.sub-title {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 15px auto 0;
+    line-height: 1.6;
+}
+
+/* product grid spacing improvement */
+#products {
+    margin-top: 20px;
+}
+#contact-section{
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.contact-box{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    color:#fff;
+}
+
+.form-control{
+    border-radius:10px;
+    padding:12px;
+}
+
+.contact-img{
+    width:100%;
+    max-width:650px;
+}
+
+/* MOBILE FIX */
+@media (max-width:768px){
+    #contact-section{
+        margin-top:60px !important;
+    }
+
+    .contact-box{
+        margin-bottom:20px;
+    }
+    #contact{
+      background-image: url(picture/download-Picsart-BackgroundRemover\ \(1\).png);
+background-repeat: no-repeat;
+    }
+} 
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.bottom-nav a{
+    text-decoration: none;
+    color: #444;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-nav a i{
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.bottom-nav a:hover{
+    color: #25a006;
+}
+
+/* Hide on desktop */
+@media(min-width: 768px){
+    .bottom-nav{
+        display: none;
+    }
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header class="mainheader">
+     <header class="bgpic">
+ <nav class="navbar navbar-expand-lg  ">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="picture/logo.png" alt="Logo" width="100">
+        </a>
+
+       <button class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarContent"
+    style="border:1px solid black;">
+
+    <i class="fa-solid fa-bars" style="color:black;font-size:24px;"></i>
+
+</button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+            <!-- Menu -->
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Search -->
+            
+
+            <!-- Cart -->
+            <a href="cart.html" class="me-3 text-dark">
+                <i class="fa-solid fa-cart-shopping fs-4"></i>
+            </a>
+
+            <!-- Logged In User -->
+            <div class="dropdown me-3" id="userLoggedIn" style="display:none;">
+                <button
+                    class="btn btn-dark rounded-circle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    style="width:40px;height:40px;">
+                    <span id="loginuser">U</span>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item" href="#" id="logout">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Logged Out User -->
+            <div class="dropdown" id="userLoggedOut">
+                <button
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    style="border:none;background:none;">
+                    <i class="fa-solid fa-user fs-4 text-dark"></i>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a href="signup.html" class="dropdown-item">
+                            Sign Up
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="signin.html" class="dropdown-item">
+                            Sign In
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+   <div class="container" id="hero">
+  <div class="row align-items-center">
+
+    <!-- LEFT SIDE (TEXT) -->
+    <div class="col-12 col-md-6"
+         style="margin-top:50px;"
+         id="heading"
+         data-aos="fade-right"
+         data-aos-duration="1000">
+
+      <h1 style="font-size:60px;color:#111;">
+        Grow Your Dream <span style="color:#25a006;"><b>Garden</b></span> with Our Plants
+      </h1>
+
+      <p style="font-size:15px;color:#111;">
+        Welcome to our plant nursery, where we help you grow your dream garden. From lush greenery to vibrant flowers, we have a wide range of plants to suit your style and space.
+      </p>
+
+      <a href="https://youtu.be/PRffV_o0_bU?si=IXMtWbOkqGbRx1F5">
+        <button type="button"
+          class="btn btn-success d-flex align-items-center justify-content-center"
+          style="width:150px;height:50px;font-size:28px;border-radius:30px;">
+          <i class="fa-solid fa-circle-play"></i>
+        </button>
+      </a>
+
+    </div>
+
+    <!-- RIGHT SIDE (IMAGE) -->
+    <div class="col-12 col-md-6 text-center"
+         style="margin-top:50px;"
+         data-aos="fade-left"
+         data-aos-duration="1000">
+
+      <img src="picture/pngegg (3).png"
+           alt="Garden"
+           class="img-fluid"
+           style="max-width:100%;height:auto;">
+
+    </div>
+
+  </div>
+</div>
+             <div class="products-section py-5 " style="margin-top: 100px;">
+
+    <div class="container">
+
+        <div class="section-header text-center mb-5">
+            <h1 class="main-title">OUR PRODUCTS</h1>
+            <p class="sub-title">Explore our latest collection of quality products at best prices</p>
+        </div>
+
+        <div class="row g-4" id="products">
+
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="product-card">
+      <img src="..." class="product-img">
+      <div class="card-body">
+        <h5>Product Name</h5>
+        <p>Price</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+    </div>
+
+</div>
+    
+
+
+
+  <div class="container-fluid p-0" id="contact-section" style="margin-top:100px;overflow-x:hidden;">
+    <div class="row align-items-center g-0 flex-column-reverse flex-md-row">
+
+        <!-- FORM -->
+        <div class="col-12 col-md-6 p-3 p-md-5 d-flex justify-content-center" id="contact">
+
+            <div class="contact-box p-4 mt-3"
+                 style="width:100%;max-width:550px;margin:auto;border-radius:15px;box-sizing:border-box;">
+
+                <div class="contact-title text-center mb-4">
+                    <h2>Contact Us</h2>
+                    <p>We will get back to you soon</p>
+                </div>
+
+                <form id="contactForm">
+
+                    <div class="mb-3">
+                        <label class="form-label">Your Name</label>
+                        <input type="text" class="form-control"
+                               name="name"
+                               placeholder="Enter your name"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email"
+                               class="form-control"
+                               name="mail"
+                               placeholder="Enter your email"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control"
+                                  rows="5"
+                                  name="message"
+                                  placeholder="Write your message..."
+                                  required></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-primary w-100">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="col-12 col-md-6 text-center p-3 p-md-5"
+     style="display:flex;justify-content:center;align-items:center;">
+
+    <img src="picture/png-clipart-green-leafed-vine-plant-on-pot-hanging-on-stand-plant-flower-landscape-architecture-hanging-plants-leaf-branch-thumbnail-Picsart-BackgroundRemover.png"
+         alt="Contact Us"
+         class="img-fluid"
+         style="max-width:100%;width:420px;height:auto;display:block;margin:auto;">
+
+</div>
+
+    </div>
+</div>
+
+     </div>
+     </header>
+     
+
+
+<!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img" style="background-color: #1f331f; margin-top: 100px;">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-30">
+                                <a href="#"><img src="picture/logo.png" alt=""></a>
+                            </div>
+                            <p>Plantify is your one-stop destination for fresh, healthy, and beautiful plants. We believe that greenery not only enhances the beauty of your home, office, or garden but also brings peace, positivity, and a healthier lifestyle. </p>
+                            <div class="social-info">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>QUICK LINK</h5>
+                            </div>
+                            <nav class="widget-nav">
+                                <ul>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#contact">contact</a></li>
+                                    <li><a href="#services">services</a></li>
+                                    <li><a href="#ourplant">Our Plants</a></li>
+                                    <li><a href="#blog">Blogs</a></li>
+                                    <li><a href="#Ourfacilities">Our Facilities</a></li>
+                                    <li><a href="#Creviews">Customer Reviews</a></li>
+                                   
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>BEST SELLER</h5>
+                            </div>
+
+                            <!-- Single Best Seller Products -->
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <img src="picture/our product8.png"alt="">
+                                </div>
+                                <div class="product-info">
+                                    
+                                    <p style="color: white;">$10.99</p>
+                                    <p style="color: white;">Cast Iron Plant.</p>
+                                </div>
+                                
+                            </div>
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <img src="picture/our product11.png"alt="">
+                                </div>
+                                <div class="product-info">
+                                    
+                                    <p style="color: white;">$19.99</p>
+                                    <p style="color: white;">Mint plant</p>
+                                </div>
+                                
+                            </div>
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <img src="picture/our product5.png"alt="">
+                                </div>
+                                <div class="product-info">
+                                   
+                                    <p style="color: white;">$18.99</p>
+                                    <p style="color: white;">Spider Plant.</p>
+                                </div>
+                                
+                            </div>
+
+                            <!-- Single Best Seller Products -->
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                   <img src="picture/our product9.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    
+                                    <p style="color: white;">$11.99</p>
+                                    <p style="color: white;">Cherry tree.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>CONTACT</h5>
+                            </div>
+
+                            <div class="contact-information">
+                                <p><span>Address:</span> Karachi korangi</p>
+                                <p><span>Phone:</span> +95 234 122 122</p>
+                                <p><span>Email:</span> dildarraza@gmail.com</p>
+                                <p><span>Open hours:</span> Mon - Sun: 8 AM to 9 PM</p>
+                                <p><span>Happy hours:</span> Sat: 2 PM to 4 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </footer>
+
+<div class="bottom-nav">
+
+    <a href="index.html">
+        <i class="fa fa-home"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="#about">
+        <i class="fa fa-info-circle"></i>
+        <span>About</span>
+    </a>
+
+    <a href="products.html">
+        <i class="fa fa-box"></i>
+        <span>Products</span>
+    </a>
+
+    <a href="cart.html">
+        <i class="fa fa-cart-shopping"></i>
+        <span>Cart</span>
+    </a>
+
+    <a href="signin.html">
+        <i class="fa fa-user"></i>
+        <span>Profile</span>
+    </a>
+
+</div>
+
+
+
+
+
+  <!-- Bootstrap JS -->
+   <script src="logic.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
+<!-- SweetAlert2 CSS + JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+
+const url = "https://script.google.com/macros/s/AKfycbxbqUdyHwdUVjC2T0SV_zL-_jpE_i4YkG_r_feN7EP-HkiYYw7mSDdmatJ3sFzeifdk/exec";
+
+fetch(url)
+.then(response => response.json())
+.then(data => {
+
+    let html = "";
+
+    data.forEach(product => {
+
+        html += `
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+
+                <img src="${product.image}"
+                     class="card-img-top"
+                     style="height:250px;object-fit:cover;">
+
+                <div class="card-body">
+
+                    <h4>${product.name}</h4>
+
+                    <h5>Rs ${product.price}</h5>
+
+                    <p>${product.description}</p>
+
+                    <a href="https://wa.me/${product.whatsapp}?text=Assalamualaikum, I want to order ${product.name}"
+                       target="_blank"
+                       class="btn btn-success w-100">
+
+                       Order Now
+
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+        `;
+
+    });
+
+    document.getElementById("products").innerHTML = html;
+
+})
+.catch(error => {
+
+    console.error("Error:", error);
+
+    document.getElementById("products").innerHTML =
+    "<h3>Products Not Found</h3>";
+
+});
+
+let Usermessageurl='https://script.google.com/macros/s/AKfycby009OVVmrPR3axsnHna9iD3xlATsgEIxZbSdGZr_ahuFOlpIgWxLltKiE7QNTzznDr/exec'
+let form=document.getElementById('contactForm');
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    let formdata = new FormData(form);
+    fetch(Usermessageurl, {
+        method: "POST",
+        mode: "no-cors",
+        body: formdata
+    })
+    .then(() => {
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: 'Thank you for contacting us.',
+        showConfirmButton: false,
+        timer: 2000
+    });
+
+    setTimeout(() => {
+        form.reset();
+        window.location.href = "index.html";
+    }, 2000);
+
+})
+    
+
+});
+
+
+ 
+ 
+  
+</script>
+</body>
+</html>

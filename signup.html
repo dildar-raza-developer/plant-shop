@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts for Calligraphy Look -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+    background-image: url('picture/pg.png'); /* yahan apni image ka path dein */
+    background-size: cover;   /* image poori body me fit ho jaye */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+
+    .registration-container {
+      max-width: 500px;
+      margin: 100px auto;
+      padding: 40px;
+      border: 2px solid #cbbcb1;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .registration-container:hover {
+      box-shadow: 0 10px 20px rgb(4, 124, 54);
+    }
+
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+   
+
+    .form-control {
+      border-radius: 12px;
+      border: 1px solid #ddd0c8;
+      padding: 12px 15px;
+      background-color: #fefefe;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      border-color: #098d10;
+      box-shadow: 0 0 5px rgba(170, 123, 94, 0.3);
+    }
+
+    .btn-info {
+      background-color: rgb(5, 61, 19);
+      border: none;
+      padding: 10px;
+     
+      font-size: 16px;
+      border-radius: 12px;
+    }
+
+    .btn-info:hover {
+      background-color: rgb(11, 116, 28);
+    }
+
+    .navbar-brand img {
+      margin-left: 40px;
+    }
+    
+  
+
+  /* Form ko transparent karna */
+  
+
+  /* Input fields thoda transparent aur clear dikhayein */
+ 
+
+  .registration-container h1 {
+    color: green; /* header ko body image pe highlight ke liye white */
+  }
+
+
+    
+  </style>
+</head>
+<body>
+
+  
+    <div class="registration-container" style="margin-bottom: 100px; margin-top: 160px;">
+      <div class="text-center mb-4">
+
+      </div>
+      <form id="REGISTRATION">
+        <div class="mb-3 position-relative">
+          <input type="email" class="form-control pe-5" placeholder="useremail" name="useremail" required>
+          <i class="fa-solid fa-envelope position-absolute top-50 end-0 translate-middle-y me-3"></i>
+        </div>
+        <div class="mb-3 position-relative">
+          <input type="text" class="form-control pe-5" placeholder="Username" name="username" required>
+          <i class="fa-regular fa-user position-absolute top-50 end-0 translate-middle-y me-3"></i>
+        </div>
+        <div class="mb-3 position-relative">
+          <input type="password" class="form-control" placeholder="Password" name="userpassword" required>
+          <i class="fa-solid fa-unlock position-absolute top-50 end-0 translate-middle-y me-3"></i>
+        </div>
+        <div class="d-grid d-flex justify-content-center">
+          <button type="submit" class="btn btn-info text-white   " name="btn" style="width: 100px;">signup</button>
+        </div>
+      </form>
+    </div>
+
+  <script>
+
+let url='https://script.google.com/macros/s/AKfycbzoWkzBuBmeIVjC8fCPNaNt07EVU8wpLoTh7AH3FqrD0eQXSImvIEfvi_LJQ7ndvGvm/exec'
+let form=document.querySelector('#REGISTRATION');
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    let formdata = new FormData(form);
+    fetch(url, {
+        method: "POST",
+        mode: "no-cors",
+        body: formdata
+    })
+    .then(() => {
+        alert("Data Submitted Successfully");
+        form.reset();
+          window.location.href = "login.html";
+    })
+    
+
+});
+  </script>
+  
+</body>
+</html>
