@@ -729,7 +729,7 @@ background-repeat: no-repeat;
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#ourproducts">Product</a>
+                    <a class="nav-link" href="products.html">Product</a>
                 </li>
             </ul>
 
@@ -787,57 +787,13 @@ background-repeat: no-repeat;
         </div>
     </div>
 </nav>
-   <div class="container" id="hero">
-  <div class="row align-items-center">
-
-    <!-- LEFT SIDE (TEXT) -->
-    <div class="col-12 col-md-6"
-         style="margin: top 150px;;"
-         id="heading"
-         data-aos="fade-right"
-         data-aos-duration="1000">
-
-      <h1 style="font-size:60px;color:#111;">
-        Grow Your Dream <span style="color:#25a006;"><b>Garden</b></span> with Our Plants
-      </h1>
-
-      <p style="font-size:15px;color:#111;">
-        Welcome to our plant nursery, where we help you grow your dream garden. From lush greenery to vibrant flowers, we have a wide range of plants to suit your style and space.
-      </p>
-
-    <div class="mt-4 d-flex justify-content-center justify-content-md-start">
-    <a href="https://youtu.be/PRffV_o0_bU?si=IXMtWbOkqGbRx1F5">
-        <button type="button"
-            class="btn btn-success d-flex align-items-center justify-content-center"
-            style="width:150px;height:50px;font-size:28px;border-radius:30px;">
-            <i class="fa-solid fa-circle-play"></i>
-        </button>
-    </a>
-</div>
-
-    </div>
-
-    <!-- RIGHT SIDE (IMAGE) -->
-    <div class="col-12 col-md-6 text-center"
-         style="margin-top:150px;"
-         data-aos="fade-left"
-         data-aos-duration="1000">
-
-      <img src="picture/pngegg (3).png"
-           alt="Garden"
-           class="img-fluid"
-           style="max-width:100%;height:auto;">
-
-    </div>
-
-  </div>
-</div>
-             <div class="products-section py-5 " style="margin-top: 100px;">
+  
+        <div class="products-section py-5 " style="margin-top: 100px;">
 
     <div class="container">
 
         <div class="section-header text-center mb-5" id="ourproducts">
-            <h1 class="main-title">PRODUCTS</h1>
+            <h1 class="main-title">OUR PRODUCTS</h1>
             <p class="sub-title">Explore our latest collection of quality products at best prices</p>
         </div>
 
@@ -858,79 +814,6 @@ background-repeat: no-repeat;
     </div>
 
 </div>
-    
-
-
-
-  <div class="container-fluid p-0" id="contact-section" style="margin-top:100px;overflow-x:hidden;">
-    <div class="row align-items-center g-0 flex-column-reverse flex-md-row">
-
-        <!-- FORM -->
-        <div class="col-12 col-md-6 p-3 p-md-5 d-flex justify-content-center" id="contact">
-
-            <div class="contact-box p-4 mt-3"
-                 style="width:100%;max-width:550px;margin:auto;border-radius:15px;box-sizing:border-box;">
-
-                <div class="contact-title text-center mb-4">
-                    <h2>Contact Us</h2>
-                    <p>We will get back to you soon</p>
-                </div>
-
-                <form id="contactForm">
-
-                    <div class="mb-3">
-                        <label class="form-label">Your Name</label>
-                        <input type="text" class="form-control"
-                               name="name"
-                               placeholder="Enter your name"
-                               required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Email Address</label>
-                        <input type="email"
-                               class="form-control"
-                               name="mail"
-                               placeholder="Enter your email"
-                               required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control"
-                                  rows="5"
-                                  name="message"
-                                  placeholder="Write your message..."
-                                  required></textarea>
-                    </div>
-
-                    <button type="submit"
-                            class="btn btn-primary w-100">
-                        Send Message
-                    </button>
-
-                </form>
-
-            </div>
-        </div>
-
-        <!-- IMAGE -->
-        <div class="col-12 col-md-6 text-center p-3 p-md-5"
-     style="display:flex;justify-content:center;align-items:center;">
-
-    <img src="picture/png-clipart-green-leafed-vine-plant-on-pot-hanging-on-stand-plant-flower-landscape-architecture-hanging-plants-leaf-branch-thumbnail-Picsart-BackgroundRemover.png"
-         alt="Contact Us"
-         class="img-fluid"
-         style="max-width:100%;width:420px;height:auto;display:block;margin:auto;">
-
-</div>
-
-    </div>
-</div>
-
-     </div>
-     </header>
-     
 
 
 <!-- ##### Footer Area Start ##### -->
@@ -968,7 +851,7 @@ background-repeat: no-repeat;
                                     <li><a href="#about">About</a></li>
                                     <li><a href="#contact">contact</a></li>
                                     <li><a href="#services">services</a></li>
-                                    <li><a href="products.html">Our Plants</a></li>
+                                    <li><a href="#ourplant">Our Plants</a></li>
                                     <li><a href="#blog">Blogs</a></li>
                                     <li><a href="#Ourfacilities">Our Facilities</a></li>
                                     <li><a href="#Creviews">Customer Reviews</a></li>
@@ -1156,40 +1039,7 @@ fetch(url)
 
 });
 
-let Usermessageurl='https://script.google.com/macros/s/AKfycby009OVVmrPR3axsnHna9iD3xlATsgEIxZbSdGZr_ahuFOlpIgWxLltKiE7QNTzznDr/exec'
-let form=document.getElementById('contactForm');
-form.addEventListener("submit", (e) => {
 
-    e.preventDefault();
-
-    let formdata = new FormData(form);
-    fetch(Usermessageurl, {
-        method: "POST",
-        mode: "no-cors",
-        body: formdata
-    })
-    .then(() => {
-
-    Swal.fire({
-        icon: 'success',
-        title: 'Message Sent!',
-        text: 'Thank you for contacting us.',
-        showConfirmButton: false,
-        timer: 2000
-    });
-
-    setTimeout(() => {
-        form.reset();
-        window.location.href = "index.html";
-    }, 2000);
-
-})
-    
-
-});
-
-
- 
  
   
 </script>
