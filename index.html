@@ -1177,6 +1177,8 @@ Cash Payment
 
 const url = "https://script.google.com/macros/s/AKfycbxbqUdyHwdUVjC2T0SV_zL-_jpE_i4YkG_r_feN7EP-HkiYYw7mSDdmatJ3sFzeifdk/exec";
 
+const whatsapp = "+923555804583"
+
 fetch(url)
 .then(response => response.json())
 .then(data => {
@@ -1201,7 +1203,7 @@ fetch(url)
 
                     <p>${product.description}</p>
 
-                    <a href="https://wa.me/${product.whatsapp}?text=Assalamualaikum, I want to order ${product.name}"
+                    <a href="https://wa.me/${whatsapp}?text=Assalamualaikum, I want to order ${product.name}"
                        target="_blank"
                        class="btn btn-success w-100">
 
