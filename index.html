@@ -1192,35 +1192,47 @@ document.getElementById("contactNO").addEventListener("click", function(e) {
     window.open(url, "_blank");
 });
 
-    let Usermessageurl ='https://script.google.com/macros/s/AKfycby009OVVmrPR3axsnHna9iD3xlATsgEIxZbSdGZr_ahuFOlpIgWxLltKiE7QNTzznDr/exec'
-let form=document.getElementById('contactForm');
-form.addEventListener("submit", (e) => {
+    let Usermessageurl = 'https://script.google.com/macros/s/AKfycby009OVVmrPR3axsnHna9iD3xlATsgEIxZbSdGZr_ahuFOlpIgWxLltKiE7QNTzznDr/exec';
 
+let form = document.getElementById('contactForm');
+
+form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     let formdata = new FormData(form);
+
     fetch(Usermessageurl, {
         method: "POST",
-        mode: "no-cors",
         body: formdata
     })
-    .then(() => {
+    .then(res => res.text())
+    .then(data => {
 
-    Swal.fire({
-        icon: 'success',
-        title: 'Message Sent!',
-        text: 'Thank you for contacting us.',
-        showConfirmButton: false,
-        timer: 2000
+        console.log("Response:", data);
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Message Sent!',
+            text: 'Thank you for contacting us.',
+            showConfirmButton: false,
+            timer: 2000
+        });
+
+        setTimeout(() => {
+            form.reset();
+            window.location.href = "index.html";
+        }, 2000);
+
+    })
+    .catch(err => {
+        console.log("Error:", err);
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            text: 'Message not sent'
+        });
     });
-
-    setTimeout(() => {
-        form.reset();
-        window.location.href = "index.html";
-    }, 2000);
-
-})
-    
 
 });
 
