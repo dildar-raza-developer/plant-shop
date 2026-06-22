@@ -909,41 +909,19 @@ Cash Payment
                     <h2>Contact Us</h2>
                     <p>We will get back to you soon</p>
                 </div>
+<form id="contactForm">
 
-                <form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required class="form-control mb-2">
 
-                    <div class="mb-3">
-                        <label class="form-label">Your Name</label>
-                        <input type="text" class="form-control"
-                               name="name"
-                               placeholder="Enter your name"
-                               required>
-                    </div>
+  <input type="email" name="mail" placeholder="Your Email" required class="form-control mb-2">
 
-                    <div class="mb-3">
-                        <label class="form-label">Email Address</label>
-                        <input type="email"
-                               class="form-control"
-                               name="mail"
-                               placeholder="Enter your email"
-                               required>
-                    </div>
+  <textarea name="message" placeholder="Your Message" required class="form-control mb-2"></textarea>
 
-                    <div class="mb-3">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control"
-                                  rows="5"
-                                  name="message"
-                                  placeholder="Write your message..."
-                                  required></textarea>
-                    </div>
+  <button type="submit" class="btn btn-primary w-100">
+    Send Message
+  </button>
 
-                    <button type="submit"
-                            class="btn btn-primary w-100">
-                        Send Message
-                    </button>
-
-                </form>
+</form>
 
             </div>
         </div>
@@ -1191,54 +1169,53 @@ document.getElementById("contactNO").addEventListener("click", function(e) {
 
     window.open(url, "_blank");
 });
+const Usermessageurl = "https://script.google.com/macros/s/AKfycby009OVVmrPR3axsnHna9iD3xlATsgEIxZbSdGZr_ahuFOlpIgWxLltKiE7QNTzznDr/exec";
 
-    let Usermessageurl = 'https://script.google.com/macros/s/AKfycby009OVVmrPR3axsnHna9iD3xlATsgEIxZbSdGZr_ahuFOlpIgWxLltKiE7QNTzznDr/exec';
+// FORCE STOP DEFAULT FORM BEHAVIOR (GLOBAL SAFETY)
+document.addEventListener("submit", function(e) {
+  e.preventDefault();
+}, true);
 
-let form = document.getElementById('contactForm');
+document.addEventListener("DOMContentLoaded", function () {
 
-form.addEventListener("submit", (e) => {
+  const form = document.getElementById("contactForm");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    let formdata = new FormData(form);
+    try {
 
-    fetch(Usermessageurl, {
+      const data = new URLSearchParams();
+      data.append("name", form.name.value);
+      data.append("mail", form.mail.value);
+      data.append("message", form.message.value);
+
+      const res = await fetch(Usermessageurl, {
         method: "POST",
-        body: formdata
-    })
-    .then(res => res.text())
-    .then(data => {
+        body: data
+      });
 
-        console.log("Response:", data);
+      const text = await res.text();
+      console.log("Response:", text);
 
-        Swal.fire({
-            icon: 'success',
-            title: 'Message Sent!',
-            text: 'Thank you for contacting us.',
-            showConfirmButton: false,
-            timer: 2000
-        });
+      alert("Message Sent Successfully!");
 
-        setTimeout(() => {
-            form.reset();
-            window.location.href = "index.html";
-        }, 2000);
+      form.reset();
 
-    })
-    .catch(err => {
-        console.log("Error:", err);
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 800);
 
-        Swal.fire({
-            icon: 'error',
-            title: 'Error!',
-            text: 'Message not sent'
-        });
-    });
+    } catch (error) {
+      console.log(error);
+      alert("Failed to send message");
+    }
+
+  });
 
 });
-
-
- 
- 
   
 </script>
 </body>
